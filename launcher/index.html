@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILGAZMOD Launcher</title>
+    <style>
+        /* Sistem Tema Ayarları */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --btn-blue: #0000FF;
+            --card-bg: #f4f4f4;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #ffffff;
+                --card-bg: #1e1e1e;
+            }
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+            transition: all 0.3s ease;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        p.subtitle { font-size: 1.2rem; opacity: 0.8; }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--btn-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+        .preview-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 40px 0;
+        }
+
+        .steps {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .steps h2 { text-align: center; margin-top: 0; }
+        ol { line-height: 1.8; }
+
+        .back-btn {
+            display: block;
+            margin-top: 50px;
+            color: var(--btn-blue);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ILGAZMOD Launcher</h1>
+    <p class="subtitle">Scratch projelerini ILGAZMOD ile açın!</p>
+
+    <a href="ilgaz-launcher.RAR" class="btn">⚡ Eklentiyi İndir (.RAR)</a>
+
+    <br>
+    <img src="resim.png" alt="ILGAZMOD Launcher Önizleme" class="preview-img">
+
+    <div class="steps">
+        <h2>Nasıl Kurulur?</h2>
+        <ol>
+            <li>Tarayıcınızda <b>Eklenti Yöneticisini</b> açın (chrome://extensions).</li>
+            <li>İndirdiğiniz <code>ilgaz-launcher.RAR</code> dosyasını klasöre ayıklayın.</li>
+            <li><b>Geliştirici Modu</b>'nu aktif edin ve <b>"Paketlenmemiş öğe yükle"</b> butonuna tıklayın.</li>
+            <li>Ayıkladığınız <b>ilgazmod-launcher</b> klasörünü seçin.</li>
+        </ol>
+    </div>
+
+    <a href="https://ilgazmod.vercel.app" class="back-btn">ILGAZMOD'a geri dön</a>
+
+</body>
+</html>
