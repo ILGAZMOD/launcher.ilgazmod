@@ -1,26 +1,25 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
-      "source": "/ilgaz-launcher.rar",
+      "source": "/(.*).rar",
       "headers": [
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=ilgaz-launcher.rar"
+          "value": "attachment"
         },
         {
           "key": "Content-Type",
-          "value": "application/x-rar-compressed"
+          "value": "application/octet-stream"
         }
       ]
     }
   ],
   "rewrites": [
     {
-      "source": "/launcher",
-      "destination": "/index.html"
+      "source": "/ilgaz-launcher.RAR",
+      "destination": "/ilgaz-launcher.rar"
     }
   ]
 }
