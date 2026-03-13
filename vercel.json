@@ -1,18 +1,15 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/launcher/index.html"
-    },
+  "headers": [
     {
       "source": "/ilgaz-launcher.rar",
-      "destination": "/launcher/ilgaz-launcher.rar"
-    },
-    {
-      "source": "/resim.png",
-      "destination": "/launcher/resim.png"
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment"
+        }
+      ]
     }
   ]
 }
