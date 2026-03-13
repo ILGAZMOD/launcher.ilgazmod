@@ -1,24 +1,18 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/launcher/ilgaz-launcher.RAR",
-      "headers": { "Content-Disposition": "attachment" },
-      "dest": "/launcher/ilgaz-launcher.RAR"
+      "source": "/",
+      "destination": "/launcher/index.html"
     },
     {
-      "src": "/launcher/(.*)",
-      "dest": "/launcher/$1"
+      "source": "/ilgaz-launcher.rar",
+      "destination": "/launcher/ilgaz-launcher.rar"
     },
     {
-      "src": "/launcher",
-      "dest": "/launcher/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/resim.png",
+      "destination": "/launcher/resim.png"
     }
   ]
 }
