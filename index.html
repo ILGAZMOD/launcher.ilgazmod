@@ -32,41 +32,43 @@
         }
 
         h1 { font-size: 3rem; margin-bottom: 10px; }
-        p.subtitle { font-size: 1.2rem; opacity: 0.8; }
+        p.subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px; }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--btn-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+        .download-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
             margin: 20px 0;
-            transition: transform 0.2s;
         }
 
-        .btn:hover { transform: scale(1.05); opacity: 0.9; }
+        .firefox-badge {
+            width: 250px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .firefox-badge:hover {
+            transform: scale(1.05);
+        }
 
         .preview-img {
             max-width: 100%;
+            width: 700px;
             height: auto;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             margin: 40px 0;
         }
 
-        .steps {
+        .info-box {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             max-width: 600px;
             margin: 0 auto;
-            text-align: left;
+            border: 2px solid var(--btn-blue);
         }
-
-        .steps h2 { text-align: center; margin-top: 0; }
-        ol { line-height: 1.8; }
 
         .back-btn {
             display: block;
@@ -80,21 +82,20 @@
 <body>
 
     <h1>ILGAZMOD Launcher</h1>
-    <p class="subtitle">Scratch projelerini ILGAZMOD ile açın!</p>
+    <p class="subtitle">Scratch projelerini ILGAZMOD ile tek tıkla açın!</p>
 
-    <a href="ilgaz-launcher.RAR" class="btn">⚡ Eklentiyi İndir (.RAR)</a>
+    <div class="download-container">
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/ilgaz-mod-launcher/" target="_blank">
+            <img src="GetonFirefoxADDON.png" alt="Firefox'tan Edin" class="firefox-badge">
+        </a>
+    </div>
 
     <br>
     <img src="resim.png" alt="ILGAZMOD Launcher Önizleme" class="preview-img">
 
-    <div class="steps">
-        <h2>Nasıl Kurulur?</h2>
-        <ol>
-            <li>Tarayıcınızda <b>Eklenti Yöneticisini</b> açın (chrome://extensions).</li>
-            <li>İndirdiğiniz <code>ilgaz-launcher.RAR</code> dosyasını klasöre ayıklayın.</li>
-            <li><b>Geliştirici Modu</b>'nu aktif edin ve <b>"Paketlenmemiş öğe yükle"</b> butonuna tıklayın.</li>
-            <li>Ayıkladığınız <b>ilgazmod-launcher</b> klasörünü seçin.</li>
-        </ol>
+    <div class="info-box">
+        <h2>Neden Bu Eklentiyi Kurmalıyım?</h2>
+        <p>Resmi Firefox eklentimiz sayesinde Scratch proje sayfalarında otomatik olarak bir <b>⚡ ILGAZMOD ile Aç</b> butonu belirir. Manuel indirme ve kurma derdi olmadan en hızlı deneyimi yaşarsınız!</p>
     </div>
 
     <a href="https://ilgazmod.vercel.app" class="back-btn">ILGAZMOD'a geri dön</a>
